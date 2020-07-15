@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -24,7 +25,7 @@
             width: 100vw;
             height: 100vh;
             position: absolute;
-            display: none;
+            /*display: none;*/
             background: rgba(0,0,0,.8);
             z-index: 5;
         }
@@ -41,27 +42,30 @@
         #arrowCheckbox{
             display: none;
         }
+        .resumeHead{
+            font-size: 1rem;
+            background: #00a8ff;
+            align-content:flex-start;
+            height: 100%;
+            border-radius: 0 0 20px 0;
+            padding-top: 30px;
+        }
         .resumeHead *{
             margin: 1px 0;
             width: 170px;
         }
         .Container{
             width: 100%;
+            height: 100%;
             display: flex;
             justify-content: space-between;
         }
-
+        .Container span{
+            width: 45%;
+        }
         .resume{
             display: flex;
             flex-direction: column;
-        }
-        .resumeHead{
-            font-size: .7rem;
-            background: #00a8ff;
-            align-content:flex-start;
-            height: 100%;
-            border-radius: 0 0 20px 0;
-            padding-top: 30px;
         }
 
         .resumeHead canvas{
@@ -69,24 +73,24 @@
             height:50px;
             z-index: 0;
         }
-        .resumeHead img{
-            /*position: relative;*/
-            /*top: 5%;*/
-            /*right: 17%;*/
-            display: inline;
-        }
+        /*.resumeHead img{*/
+        /*    !*position: relative;*!*/
+        /*    !*top: 5%;*!*/
+        /*    !*right: 17%;*!*/
+        /*    display: inline;*/
+        /*}*/
         .resumeHead h2{
             margin-bottom: 5px;
         }
         .present{
-            height: 90px;
+            height: 100%;
             /*width: 7.5rem;*/
             width: 80%;
             color: azure;
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
-            margin-left: 13%;
+            margin-left: 10%;
             margin-bottom: 12px;
         }
         .srcIcon{
@@ -173,6 +177,20 @@
         .action{
             height: .2rem;
             opacity: 0;
+            font-size: .7rem;
+        }
+        @media screen and (max-width: 480px){
+            .action li{
+                font-size: .5rem;
+            }
+        }
+        /*@media screen and (max-width: 500px){*/
+        /*    .action li{*/
+        /*        font-size: .7rem;*/
+        /*    }*/
+        /*}*/
+        .action li{
+            height: 45%;
         }
         #arrow{
             position: absolute;
@@ -207,10 +225,10 @@
                     <p>民族：汉族</p>
                     <p>学历：专科</p>
             </span>
-                <span>
-                <img src="http://cd7.yesapi.net/2A11A560749EE87CBC01AB1E8AEAB1F6_20200704113138_5dd28b1b37758397dbc0bc90d1129082.jpg"
-                     alt="" style="width: 40px">
-            </span>
+<!--                <span>-->
+<!--                <img src="http://cd7.yesapi.net/2A11A560749EE87CBC01AB1E8AEAB1F6_20200704113138_5dd28b1b37758397dbc0bc90d1129082.jpg"-->
+<!--                     alt="" style="width: 40px">-->
+<!--            </span>-->
             </div>
         </div>
         <div class="srcIcon canvasContainer">
@@ -238,10 +256,11 @@
             <svg t="1593852716872" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8463" width="20" height="20"><path d="M145 96l66 746.6L511.8 928l299.6-85.4L878.7 96H145z m610.9 700.6l-244.1 69.6-245.2-69.6-56.7-641.2h603.8l-57.8 641.2z" p-id="8464" fill="#515151"></path><path d="M281 249l1.7 24.3 22.7 253.5h206.5v-0.1h112.9l-11.4 118.5L511 672.9v0.2h-0.8l-102.4-27.7-6.5-73.2h-91l11.3 144.7 188.6 52h1.7v-0.4l187.7-51.7 1.7-16.3 21.2-242.2 3.2-24.3H511v0.2H389.9l-8.2-94.2h352.1l1.7-19.5 4.8-47.2L742 249H511z" p-id="8465" fill="#515151"></path></svg>
             <h3>专业技能</h3>
             <ul>
-                <li>掌握使用H5、CSS、JavaScript进行网页开发，熟悉JQuery库和Vue、React等前端框架及Node.js后端框架。</li>
-                <li>掌握http、TCP/IP相关网络协议。</li>
-                <li>熟练AJAX/JSON,熟悉正则表达式、JS面向对象，JSONP跨域请求。</li>
-                <li>熟悉MySQL数据库开发，数据结构。</li>
+                <li>熟练掌握Javascript、Ajax等前端开发技术，熟悉jQuery、Vue等Javascript框架，可以完成DOM操作、Ajax异步请求、事件处理、表单验证，能快速高效实现各种动画交互效果并封装实现可复用的控件。</li>
+                <li>熟悉SVG、Canvas等图像渲染控件，能够制作简单的动画。</li>
+                <li>熟练使用HTML，熟练使用DIV+CSS技术，可以根据设计图，完成切图并独立完成HTML页面布局与开发，在解决浏览器兼容性问题上有一定的经验。</li>
+                <li>对node.js，前后端数据交互有一定了解。</li>
+                <li>熟悉ECMAScript脚本语言规范，MySQL数据库开发，数据结构，Echarts、Highcharts等数据可视化框架。</li>
             </ul>
         </div>
         <div class="experience">
@@ -251,15 +270,14 @@
                 <div class="item">
                     <h4>2020.2 开发微信小程序及其后台</h4>
                     <ul class="action">
-                        <li>主要是使用HTML标记、div+css+javascript Dom操作等前端WEB技术进行网站的开发与制造</li>
-                        <li>项目简介：基于MySQL图片数据上传接口，编写后台管理站点使用此接口上传图片，微信小程序端使用图片获取接口获取数据库图片并展示。</li>
+                        <li>采用Vue框架响应式后台页面，将上传的图片进行base64转码并压缩上传至MySQL数据库。微信小程序获取数据库图片部分通过swiper展示，其余采用瀑布流展示。</li>
                     </ul>
                 </div>
                 <div class="item">
-                    <h4>2019-2020	基于STM32的超声波测距系统</h4>
+                    <h4>2020.6.20-2020.7	基于ESP8266Espruino的超声波测距系统</h4>
                     <ul class="action">
                         <li>负责开发小组的工作调度、人员职能安排与分配、功能策划与需求分析以及客户端开发。</li>
-                        <li>在项目中我负责STM32和手机接收端软件功能的实现，参考文档学习基本的Android开发通过Socket套接字成功使双方建立连接实现数据传输。</li>
+                        <li>nodeMCU采用Espruino驱动固件，以提供类似node.js的运行环境。nodeMCU模块开启HTTP服务器，并提供路由，接收请求并返回原生前端网页响应，前端网页Ajax请求nodeMCU，nodeMCU驱动超声波测距并返回json数据响应到前端页面更新。</li>
                     </ul>
                 </div>
                 <div class="separate">
@@ -334,11 +352,11 @@
             if (markArrowState){
                 $("#arrow").css("transform","rotate(180deg");
                 $(".action").animate({
-                    height:'3rem',
+                    height:'4rem',
                     opacity:'1',
                 });
                 $(".action").animate({
-                    height:'2.8rem',
+                    height:'3.8rem',
                     opacity:'1',
                 });
             }else {
