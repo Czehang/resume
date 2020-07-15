@@ -225,8 +225,8 @@
                     <p>民族：汉族</p>
                     <p>学历：专科</p>
             </span>
-<!--                <span>-->
-<!--            </span>-->
+<!--              <span>   头像图片-->
+<!--           </span>-->
             </div>
         </div>
         <div class="srcIcon canvasContainer">
@@ -370,16 +370,14 @@
         });
     }
     function judgeDraw(input) {
-
-        var checked = $('.srcIcon input');
+        var checked = $('.srcIcon input');      //屏蔽其他按钮
         for (let x = 0;x<checked.length;x++){
             checked[x].disabled = true;
             setTimeout(()=>{checked[x].disabled = false;},1000)
             if (x!=input.value-1) checked[x].checked = false;
         }
-        if (checked[input.value-1].checked)$(".canvasContainer").slideDown("slow");
+        if (checked[input.value-1].checked)$(".canvasContainer").slideDown("slow");     //伸缩栏
         else $(".canvasContainer").slideUp("slow");
-
         var P = $('.srcIcon p');
         for (let x = 0;x<checked.length;x++){
             P[x].style.opacity = 0;
@@ -388,17 +386,19 @@
         P[input.value-1].style.opacity = 1;
         P[input.value-1].style.userSelect = 'text';
 
+        var pWidth = $('#' + input.value.toString()).width();  //获取文本宽度
+
         var Value = 1+parseInt(2*(input.value-1));
         var canvas = document.getElementById('showCallMe');
-        canvas.width = $('#showCallMe').width()
-        var Width = $('#showCallMe').width()/8;
+        canvas.width = $('#showCallMe').width();
+        var Width = $('#showCallMe').width()/8;  //将canvas分成8份
         var X = Width*Value;
         var Y = $('#showCallMe').height()+8;
         // console.log(X);
         // console.log(Y);
-        var c=document.getElementById("showCallMe");
-        var ctx=c.getContext("2d");
-        var place = [[X,Y],[X-Width/100*3,Y-Y/100*12],[X-Width/100*90,Y-Y/100*12],[X-Width/100*90,Y-Y/100*80],[X+Width/100*90,Y-Y/100*80],[X+Width/100*90,Y-Y/100*12],[X+Width/100*3,Y-Y/100*12],[X,Y]];
+        var c = document.getElementById("showCallMe");
+        var ctx = c.getContext("2d");
+        var place = [[X,Y],[X-pWidth/150*3,Y-Y/100*12],[X-pWidth/150*90,Y-Y/100*12],[X-pWidth/150*90,Y-Y/100*80],[X+pWidth/150*90,Y-Y/100*80],[X+pWidth/150*90,Y-Y/100*12],[X+pWidth/150*3,Y-Y/100*12],[X,Y]];
         var placeCount = 1;
         var reduce;
         var beforeP;
